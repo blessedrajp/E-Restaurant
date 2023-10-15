@@ -45,7 +45,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
       <div class="container">
-      <a class="navbar-brand" href="#" style="font-weight: bolder;">അടിപൊളി</a>
+      <a class="navbar-brand" href="#" style="font-weight: bolder;">E-RESTAURANT</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -127,8 +127,8 @@
         <button type="button" class="btn btn-success text-center pr-4 p-3"> <a href="addproduct.html" style="color: white; text-decoration: none;">ADD Recipies +</a> </button>
         <button type="button" class="btn btn-warning text-center pr-4 p-3"> <a href="index.html" style="color: white; text-decoration: none;">ADD Wishlist +</a></button>
         </div>
-        <!-- <button type="button" class="btn btn-warning text-center pr-4 p-3"> <a href="index.html" style="color: white; text-decoration: none;">TOTAL PRICE: <span id="totalamountcart">0</span></a></button>
-        </div> -->
+        <button type="button" class="btn btn-danger text-center pr-4 p-3" onclick="submit()"> <a href="index.html" style="color: white; text-decoration: none;">BOOK MY ORDER</a></button>
+        </div>
 
       </div>
     </div>
@@ -221,4 +221,8 @@ document.getElementById('Rprice3').innerHTML=getrprice3
     
 TOTALprice()
 
+
+ function submit(){
+  alert("Your order is booked");
+}
 </script>
