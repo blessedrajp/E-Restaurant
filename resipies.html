@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>E-RESTAURANT</title>
+
+    <style>
+      body{
+        background-color: black;
+        padding: 0;
+      }
+      .cbottom{
+        margin-left: 0.5rem;
+      }
+      .cbottomw{
+        margin-left: 3rem;
+      }
+
+      @media screen and (max-width: 1200px) {
+
+        .cbottomw{
+        margin-left: 1rem;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+      <div class="container">
+      <a class="navbar-brand" href="#" style="font-weight: bolder;">അടിപൊളി</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="addproduct.html">Add Resipies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wishlist.html">View Wishlist</a>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    </nav>
+
+    <div class="">
+      <div class="row">
+        <div class="col mt-5">
+        <div class="card" style="width: 25rem; height: 30rem;">
+          <img src="" class="card-img-top"  id="SET-image" alt="...">
+          <div class="card-body bg-secondary">
+            <h5 class="card-title" id="getipName" style="font-size: 40px;">Product Name</h5>
+            <p class="card-text" id="getDisc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 ><span id="GetPrice"></span>/rs</h4>
+            <div class="row">
+              <div class="col">
+                  <button type="button" id="QuanInc" class="btn btn-primary" onclick="Decrement()">-</button>
+
+              </div>
+              <div class="col">
+                  <button type="button" id="Changing-Quantity" class="btn btn-warning">0</button>
+
+              </div>
+              <div class="col">
+                  <button type="button" id="Quandec"  class="btn btn-primary " onclick="Increment()">+</button>
+
+              </div>
+            </div>
+            
+          </div>
+          
+          </div>
+          <button type="button" class="btn btn-success mt-4 cbottom ">Quantity: <span id="D-Quantity">0</span>
+            <button type="button" class="btn btn-success mt-4 cbottom ">Total: <span id="TOTALPrice">0</span>
+          
+            <button type="button" class="btn btn-danger mt-4 cbottomw" onclick="addcart()"><a href="wishlist.html" style="color: white; text-decoration: none;">ADD to Wishlist</a></button>
+        </div>
+
+
+
+         <div class="col mt-5">
+        <div class="card" style="width: 25rem; height: 30rem;">
+          <img src="" class="card-img-top"  id="SET-image2" alt="...">
+          <div class="card-body bg-secondary">
+            <h5 class="card-title" id="getipName2" style="font-size: 40px;">Product Name</h5>
+            <p class="card-text" id="getDisc2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h4 ><span id="GetPrice2"></span>/rs</h4>
+            <div class="row">
+              <div class="col">
+                  <button type="button" id="QuanInc2" class="btn btn-primary" onclick="Decrement2()">-</button>
+
+              </div>
+              <div class="col">
+                  <button type="button" id="Changing-Quantity2" class="btn btn-warning">0</button>
+
+              </div>
+              <div class="col">
+                  <button type="button" id="Quandec2"  class="btn btn-primary " onclick="Increment2()">+</button>
+
+              </div>
+            </div>
+            
+          </div>
+          
+          </div>
+          <button type="button" class="btn btn-success mt-4 cbottom ">Quantity: <span id="D-Quantity2">0</span>
+            <button type="button" class="btn btn-success mt-4 cbottom ">Total: <span id="TOTALPrice2">0</span>
+          
+            <button type="button" class="btn btn-danger mt-4 cbottomw" onclick="addcart()"><a href="wishlist.html" style="color: white; text-decoration: none;">ADD to Wishlist</a></button>
+        </div>
+
+
+        <div class="col mt-5">
+          <div class="card" style="width: 25rem; height: 30rem;">
+            <img src="" class="card-img-top"  id="SET-image3" alt="...">
+            <div class="card-body bg-secondary">
+              <h5 class="card-title" id="getipName3" style="font-size: 40px;">Product Name</h5>
+              <p class="card-text" id="getDisc3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 ><span id="GetPrice3"></span>/rs</h4>
+              <div class="row">
+                <div class="col">
+                    <button type="button" id="QuanInc3" class="btn btn-primary" onclick="Decrement3()">-</button>
+  
+                </div>
+                <div class="col">
+                    <button type="button" id="Changing-Quantity3" class="btn btn-warning">0</button>
+  
+                </div>
+                <div class="col">
+                    <button type="button" id="Quandec3"  class="btn btn-primary " onclick="Increment3()">+</button>
+  
+                </div>
+              </div>
+              
+            </div>
+            
+            </div>
+            <button type="button" class="btn btn-success mt-4 cbottom ">Quantity: <span id="D-Quantity3">0</span>
+              <button type="button" class="btn btn-success mt-4 cbottom ">Total: <span id="TOTALPrice3">0</span>
+            
+              <button type="button" class="btn btn-danger mt-4 cbottomw" onclick="addcart()"><a href="wishlist.html" style="color: white; text-decoration: none;">ADD to Wishlist</a></button>
+          </div>
+
+      </div>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
+
+<script>
+
+function  getinput(){
+  let getipimg=localStorage.getItem('ipImage')
+  let productimg=document.getElementById('SET-image')
+  productimg.src=getipimg
+ 
+
+  let getname=localStorage.getItem('product-item');
+  let productname=document.getElementById('getipName');
+
+  productname.innerText=getname;
+
+  
+  let Description=localStorage.getItem('product-Description');
+  let productDes=document.getElementById('getDisc');
+  productDes.innerText=Description;
+
+  let Maximum=localStorage.getItem('product-Max');
+  let productmax=document.getElementById('')
+
+
+
+  let getipPrice=localStorage.getItem('product-Price')
+  let P_price=document.getElementById('GetPrice');
+  P_price.innerHTML=getipPrice
+  
+
+}
+getinput()
+
+
+function  getinput2(){
+  let getipimg=localStorage.getItem('ipImage2')
+  let productimg=document.getElementById('SET-image2')
+  productimg.src=getipimg
+ 
+
+  let getname=localStorage.getItem('product-item2');
+  let productname=document.getElementById('getipName2');
+
+  productname.innerText=getname;
+
+  
+  let Description=localStorage.getItem('product-Description2');
+  let productDes=document.getElementById('getDisc2');
+  productDes.innerText=Description;
+
+  let Maximum=localStorage.getItem('product-Max2');
+  let productmax=document.getElementById('')
+
+
+
+  let getipPrice=localStorage.getItem('product-Price2')
+  let P_price=document.getElementById('GetPrice2');
+  P_price.innerHTML=getipPrice
+  
+
+}
+getinput2()
+
+
+function  getinput3(){
+  let getipimg=localStorage.getItem('ipImage3')
+  let productimg=document.getElementById('SET-image3')
+  productimg.src=getipimg
+ 
+
+  let getname=localStorage.getItem('product-item3');
+  let productname=document.getElementById('getipName3');
+
+  productname.innerText=getname;
+
+  
+  let Description=localStorage.getItem('product-Description3');
+  let productDes=document.getElementById('getDisc3');
+  productDes.innerText=Description;
+
+  let Maximum=localStorage.getItem('product-Max3');
+  let productmax=document.getElementById('')
+
+
+
+  let getipPrice=localStorage.getItem('product-Price3')
+  let P_price=document.getElementById('GetPrice3');
+  P_price.innerHTML=getipPrice
+  
+
+}
+getinput3()
+
+
+
+
+
+
+
+
+
+
+  let value=0
+  let Quantity=document.getElementById('Changing-Quantity')
+  let D_Quantity=document.getElementById('D-Quantity')
+  let Tamount=document.getElementById('TOTALPrice');
+  
+  let iprice=localStorage.getItem('product-Price')
+  let totalprice=iprice;
+
+  function Decrement(){
+   if(value>0){
+     value-=1
+   }
+   Quantity.innerHTML=value
+   D_Quantity.innerHTML=value
+   localStorage.setItem('Cquantity',value)
+
+   if(value<max-1){
+    Tamount.textContent=Tamount.textContent-totalprice
+    localStorage.setItem('Rtotal',Tamount.textContent)
+   }
+
+   
+  }
+
+ function Increment(){
+ 
+ let Maximum="max";
+ let getMax=localStorage.getItem('product-Max');
+ max=getMax
+ let q;
+
+ if(value<max){
+   value+=1;
+ }
+
+ if(value>=max){
+   Quantity.innerHTML=Maximum;
+ } else {
+   Quantity.innerHTML=value;
+   D_Quantity.innerHTML=value;
+   q=value;
+  localStorage.setItem('Cquantity',value)
+   
+ }
+ if(value<max){
+  Tamount.innerHTML=iprice*q
+  localStorage.setItem('Rtotal',Tamount.innerHTML)
+ }
+
+}
+
+
+
+
+// two
+
+
+
+
+let valueTwo=0
+  let Quantity2=document.getElementById('Changing-Quantity2')
+  let D_Quantity2=document.getElementById('D-Quantity2')
+  let Tamount2=document.getElementById('TOTALPrice2');
+  let getMax2=localStorage.getItem('product-Max2');
+   let max=getMax2
+  
+  let iprice2=localStorage.getItem('product-Price2')
+  let totalprice2=iprice2;
+
+  function Decrement2(){
+   if(valueTwo>0){
+    valueTwo-=1
+   }
+   Quantity2.innerHTML=valueTwo
+   D_Quantity2.innerHTML=valueTwo
+   localStorage.setItem('Cquantity2',valueTwo)
+
+   if(valueTwo<max-1){
+    Tamount2.textContent=Tamount2.textContent-totalprice2
+    localStorage.setItem('Rtotal2',Tamount2.textContent)
+   }
+
+   
+  }
+
+ function Increment2(){
+ 
+ let Maximum="max";
+ let getMax2=localStorage.getItem('product-Max2');
+  let max=getMax2
+ let q;
+
+ if(valueTwo<max){
+  valueTwo+=1;
+ }
+
+ if(valueTwo>=max){
+   Quantity2.innerHTML=Maximum;
+ } else {
+   Quantity2.innerHTML=valueTwo;
+   D_Quantity2.innerHTML=valueTwo;
+   q=valueTwo;
+  localStorage.setItem('Cquantity2',valueTwo)
+   
+ }
+ if(valueTwo<max){
+  Tamount2.innerHTML=iprice2*q
+  localStorage.setItem('Rtotal2',Tamount2.innerHTML)
+ }
+
+}
+
+// 3rd item
+
+let valueThree=0
+  let Quantity3=document.getElementById('Changing-Quantity3')
+  let D_Quantity3=document.getElementById('D-Quantity3')
+  let Tamount3=document.getElementById('TOTALPrice3');
+  let getMax3=localStorage.getItem('product-Max3');
+   let maxth=getMax3
+  
+  let iprice3=localStorage.getItem('product-Price3')
+  let totalprice3=iprice3;
+
+  function Decrement3(){
+   if(valueThree>0){
+    valueThree-=1
+   }
+   Quantity3.innerHTML=valueThree
+   D_Quantity3.innerHTML=valueThree
+   localStorage.setItem('Cquantity3',valueThree)
+
+   if(valueThree<max-1){
+    Tamount3.textContent=Tamount3.textContent-totalprice3
+    localStorage.setItem('Rtotal3',Tamount3.textContent)
+   }
+
+   
+  }
+
+ function Increment3(){
+ 
+ let Maximum="max";
+ let getMax3=localStorage.getItem('product-Max3');
+  let max=getMax3
+ let q;
+
+ if(valueThree<max){
+  valueThree+=1;
+ }
+
+ if(valueThree>=max){
+   Quantity3.innerHTML=Maximum;
+ } else {
+   Quantity3.innerHTML=valueThree;
+   D_Quantity3.innerHTML=valueThree;
+   q=valueThree;
+  localStorage.setItem('Cquantity3',valueThree)
+   
+ }
+ if(valueThree<max){
+  Tamount3.innerHTML=iprice3*q
+  localStorage.setItem('Rtotal3',Tamount3.innerHTML)
+ }
+
+}
+
+
+</script>
