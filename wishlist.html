@@ -12,9 +12,10 @@
 
     <style>
         body{
-        background-color: black;
+          background-color: beige;
         padding: 0;
-        color: white;
+        margin: 0;
+        overflow-x: hidden;
       }
       .cartset{
         padding-left: 3rem;
@@ -27,6 +28,8 @@
       }
 
       @media screen and (max-width: 1200px) {
+
+        
         .cartset{
         padding-left: 1rem;
         text-transform: lowercase;
@@ -38,6 +41,12 @@
       .table-top{
         padding-left:15px;
       }
+      body{
+          background-color: beige;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+      }
       }
     </style>
   </head>
@@ -45,21 +54,21 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
       <div class="container">
-      <a class="navbar-brand" href="#" style="font-weight: bolder;"> <i class="fa-solid fa-martini-glass-citrus"></i>  E-RESTAURANT</a>
+        <a class="navbar-brand" href="#" style="font-weight: bolder; font-size: 30px;">E-RESTAURANT  <i class="fa-solid fa-bowl-rice fa-bounce"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="index.html">ADD RECIPE </a>
+        <ul class="navbar-nav ml-auto pr-5">
+          <li class="nav-item active">
+            <a class="nav-link " href="resipies.html" style="font-weight: bolder;"><button type="button" class="btn btn-danger">View Resipies</button><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="resipies.html">VIEW RECIPE</a>
+            <a class="nav-link" href="index.html"><button type="button" class="btn btn-info">ADD +</button></a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">WISHLIST<span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="wishlist.html"><i class="fa-solid fa-cart-shopping mt-2" style="font-size: 20px;"></i></a>
           </li>
           
         </ul>
@@ -71,25 +80,25 @@
     </div>
     </nav>
 
-
     
 
-    <div class="container">
-        <div class="text-center mt-5">
-            <h1 class="bg-primary">MY WISH-LIST</h1>
+    <div class="container"data-aos="fade-down">
+        <div class="text-center mt-2"> 
+          <button type="button" class="btn btn-dark mt-4 p-2" style= "width:76vw;font-size: 20px; font-weight: bolder;" >WISH LIST      
+               <i class="fa-solid fa-cart-shopping mt-2" style="font-size: 20px;"></i></button>
         </div>
     <div class="flex flex-col">
         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-            <div class="overflow-hidden">
+            <div class="overflow-hidden"data-aos="fade-right">
               <table class="min-w-full text-left text-sm font-light">
                 <thead class="border-b font-medium dark:border-neutral-500">
                   <tr >
-                    <th scope="col" class="px-6 py-4">Recipes</th>
-                    <th scope="col" class="px-6 py-4 table-top">Recipe-Name</th>
-                    <th scope="col" class="px-6 py-4 table-top">Price</th>
-                    <th scope="col" class="px-6 py-4 table-top">Quantity</th>
-                    <th scope="col" class="px-6 py-4 table-top">Total</th>
+                    <th scope="col" class="px-6 py-4">Recipes  <i class="fa-solid fa-bowl-rice fa-bounce"></i></th>
+                    <th scope="col" class="px-6 py-4 table-top">Recipe <i class="fa-solid fa-utensils fa-bounce"></i></th>
+                    <th scope="col" class="px-6 py-4 table-top">Price <i class="fa-solid fa-indian-rupee-sign fa-bounce"></i></th>
+                    <th scope="col" class="px-6 py-4 table-top">Quantity  <i class="fa-solid fa-fish fa-bounce"></i></th>
+                    <th scope="col" class="px-6 py-4 table-top">Total <i class="fa-solid fa-martini-glass-citrus fa-bounce"></i></th>
 
                   </tr>
                 </thead>
@@ -124,11 +133,12 @@
           </div>
         </div>
         <div class="add mt-4">
-        <button type="button" class="btn btn-success text-center pr-4 p-3"> <a href="addproduct.html" style="color: white; text-decoration: none;">ADD Recipes +</a> </button>
-        <button type="button" class="btn btn-warning text-center pr-4 p-3"> <a href="index.html" style="color: white; text-decoration: none;">ADD Wishlist +</a></button>
+        <button type="button" class="btn btn-success text-center pr-4 p-3"> <a href="index.html" style="color: white; text-decoration: none;">ADD Recipes +</a> </button>
+        <button type="button" class="btn btn-warning text-center pr-4 p-3"> <a href="resipies.html" style="color: white; text-decoration: none;">ADD Wishlist +</a></button>
+        <button type="button" class="btn btn-danger text-center pr-4 p-3 " onclick="submit()"> <a href="index.html" style="color: white; text-decoration: none;">BOOK MY ORDER</a></button>
         </div>
-        <button type="button" class="btn btn-danger text-center pr-4 p-3 mt-3" onclick="submit()"> <a href="index.html" style="color: white; text-decoration: none;">BOOK MY ORDER</a></button>
         </div>
+        
 
       </div>
     </div>
@@ -140,7 +150,14 @@
         <h4>QUANTITY</h4>
         <h4>TOTAL</h4>
     </div> -->
+    <div class="bg-dark p-1 text-center mt-5" style="color: white;">
+      <p class="mt-4">© Copyrights All Rights Reserved</p>
+      <p class="mb-4">Designed by <span style="color: rgb(255, 213, 0);">Blessed Raj</span></p>
+    </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>
 
